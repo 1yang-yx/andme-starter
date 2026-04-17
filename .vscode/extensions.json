@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "EditorConfig.EditorConfig",
+    "uni-helper.uni-helper-vscode",
+    "uni-helper.uni-app-schemas-vscode",
+    "uni-helper.uni-cloud-snippets",
+    "uni-helper.uni-ui-snippets",
+    "stylelint.vscode-stylelint"
+  ],
+  "unwantedRecommendations": [
+    "octref.vetur",
+    "hookyqr.beautify"
+  ]
+}
