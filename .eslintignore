@@ -1,0 +1,25 @@
+# 依赖
+node_modules
+
+# 构建产物
+dist
+unpackage
+
+# 缓存
+.eslintcache
+.cache
+
+# 文档
+*.md
+
+# 静态资源
+src/static
+
+# 脚手架自带的 .d.ts,不检查
+shims-uni.d.ts
+src/shime-uni.d.ts
+src/env.d.ts
+
+# 配置文件本身不走 ESLint
+*.config.js
+*.config.ts
