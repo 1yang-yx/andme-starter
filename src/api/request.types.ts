@@ -56,12 +56,7 @@ export interface RequestConfig {
  * - business: HTTP 200 但业务 code 非成功,使用 message 提示
  * - unknown: 未分类错误,兜底
  */
-export type RequestErrorType =
-  | 'network'
-  | 'timeout'
-  | 'http'
-  | 'business'
-  | 'unknown'
+export type RequestErrorType = 'network' | 'timeout' | 'http' | 'business' | 'unknown'
 
 /**
  * 统一错误类。
@@ -86,7 +81,7 @@ export class RequestError extends Error {
       statusCode?: number
       code?: number
       raw?: unknown
-    },
+    }
   ) {
     super(message)
     this.name = 'RequestError'
@@ -112,9 +107,7 @@ export class RequestError extends Error {
  * })
  * ```
  */
-export type RequestInterceptor = (
-  config: RequestConfig,
-) => RequestConfig | Promise<RequestConfig>
+export type RequestInterceptor = (config: RequestConfig) => RequestConfig | Promise<RequestConfig>
 
 /**
  * 响应拦截器。
@@ -129,7 +122,7 @@ export type RequestInterceptor = (
  */
 export type ResponseInterceptor = (
   response: RawResponse,
-  config: RequestConfig,
+  config: RequestConfig
 ) => unknown | Promise<unknown>
 
 /**
@@ -144,7 +137,7 @@ export type ResponseInterceptor = (
  */
 export type ErrorInterceptor = (
   error: RequestError,
-  config: RequestConfig,
+  config: RequestConfig
 ) => RequestError | Promise<RequestError>
 
 /**
